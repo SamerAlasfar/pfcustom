@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include pfcustom *.css
+recursive-include pfcustom *.csv
+recursive-include pfcustom *.html
+recursive-include pfcustom *.ico
+recursive-include pfcustom *.js
+recursive-include pfcustom *.json
+recursive-include pfcustom *.md
+recursive-include pfcustom *.png
+recursive-include pfcustom *.py
+recursive-include pfcustom *.svg
+recursive-include pfcustom *.txt
+recursive-exclude pfcustom *.pyc
