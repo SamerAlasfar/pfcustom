@@ -1,0 +1,2 @@
+doc.contract_end_date = frappe.utils.add_to_date(doc.contract_start_date, years=int(doc.contracted_period))
+doc.billing_end_date = frappe.utils.add_to_date(doc.billing_start_date, years=int(doc.billing_period))

@@ -1,0 +1,15 @@
+{
+ "creation": "2023-01-16 11:19:07.243189",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "Sales Order",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2023-01-18 15:10:59.093184",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Sales Order Contract",
+ "owner": "Administrator",
+ "script": "frappe.ui.form.on('Sales Order', {\r\n    onload: function(frm) {\r\n\t\tfrm.set_query('parent_contract', function(doc) {\r\n\t\t\treturn {\r\n\t\t\t\tfilters: {\r\n\t\t\t\t\t\"status\": ['Not In','Draft','Cancelled'],\r\n                    \"contract_status\":['Not In','Renewed'],\r\n\t\t\t\t\t\"company\": doc.company,\r\n\t\t\t\t\t\"customer\":doc.customer,\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t});\r\n\t},\r\n\tdelivery_date(frm){\r\n\t\tconsole.log(frm.doc.delivery_date);\r\n\t\tfrm.set_value(\"billing_start_date\", frm.doc.delivery_date);\r\n\t\tfrm.set_value(\"contract_start_date\", frm.doc.delivery_date);\r\n\t}\r\n})",
+ "view": "Form"
+}

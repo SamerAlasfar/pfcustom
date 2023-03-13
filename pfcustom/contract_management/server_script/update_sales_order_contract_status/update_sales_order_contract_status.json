@@ -1,0 +1,17 @@
+{
+ "allow_guest": 0,
+ "creation": "2023-01-16 13:44:20.040997",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Server Script",
+ "doctype_event": "Before Submit",
+ "event_frequency": "All",
+ "idx": 0,
+ "modified": "2023-01-16 13:44:20.040997",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "update sales order contract status",
+ "owner": "Administrator",
+ "reference_doctype": "Sales Order",
+ "script_type": "DocType Event"
+}
